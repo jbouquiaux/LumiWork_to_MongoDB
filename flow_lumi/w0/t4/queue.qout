@@ -1,0 +1,13 @@
+
+Resources Used
+
+Total Memory used                        - MEM              : 0B
+Total CPU Time                           - CPU_Time         : 00:44:48
+Execution Time                           - Wall_Time        : 00:00:21
+total programme cpu time                 - Total_CPU        : 32:28.700
+Total_CPU / CPU_Time  (%)                - ETA              : 72%
+Number of alloc CPU                      - NCPUS            : 128
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 128
+Mobilized Resources x Execution Time     - R_Wall_Time      : 00:44:48
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 100%
+

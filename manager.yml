@@ -1,0 +1,35 @@
+hardware: &hardware
+##############################################
+   num_nodes: 270
+   sockets_per_node: 2
+   cores_per_socket: 64
+   mem_per_node: 256 Gb
+
+job: &job
+    mpi_runner: mpirun
+    shell_runner: None
+    pre_run:
+            - source /gpfs/home/acad/ucl-modl/jbouq/abinit-9.10.5/build/modules.txt
+            - export PATH=/gpfs/home/acad/ucl-modl/jbouq/abinit-9.10.5/build/src/98_main:$PATH
+
+policy:
+        autoparal: 0
+
+qadapters:
+  - priority: 1
+    queue:
+       qtype: slurm
+       qname: batch
+       qparams:
+          account: leds
+
+    limits:
+       timelimit: 0-1:00:00
+       min_cores: 128
+       max_cores: 128
+       max_mem_per_proc: 1900
+       min_mem_per_proc: 1900
+       max_num_launches: 10
+    hardware: *hardware
+    job: *job
+
